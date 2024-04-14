@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="one">
+
+        <header id="main">
+            <div>
+                <img src="/images/profile.png" alt="">
+            </div>
+            <p id="usrnm">Kumar Saurav</p>
+        </header>
+        <div id="body">
+            <section id="watchlists">
+                <a href="">
+                    <h2>Watchlists</h2>
+                </a>
+                <!-- Your watchlist content here -->
+            </section>
+    
+            <section id="reviews">
+                <a href="">
+                    <h2>Reviews</h2>
+                </a>
+                <!-- Your reviews content here -->
+            </section>
+    
+            <section id="ratings">
+                <a href="">
+                    <h2>Ratings</h2>
+                </a>
+                <!-- Your ratings content here -->
+            </section>
+    
+            <section id="purchase-history">
+                <a href="">
+                    <h2>Purchase History</h2>
+                </a>
+                <!-- Your purchase history content here -->
+            </section>
+    
+            <section id="account-settings">
+                <a href="">
+                    <h2>Account Settings</h2>
+                </a>
+                <!-- Your account settings content here -->
+            </section>
+        </div>
+    </div>
+    <div id="two">
+
+    </div>
+    <script>
+       document.getElementById('watchlists').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default behavior of the link
+    // Clear the content of the second div
+    document.getElementById('two').innerHTML = '';
+    // Append images to the second div with click event listeners
+    var images = [
+        '/images/WhatsApp Image 2024-04-13 at 22.33.11_9f9d626f.jpg',
+        '/images/WhatsApp Image 2024-04-13 at 22.32.52_974f0970.jpg',
+        '/images/WhatsApp Image 2024-04-13 at 22.33.46_18a63490.jpg',
+        '/images/WhatsApp Image 2024-04-13 at 22.33.40_a564122d.jpg',
+        '/images/WhatsApp Image 2024-04-13 at 22.33.59_d9d42247.jpg',
+        '/images/WhatsApp Image 2024-04-13 at 22.34.01_109712ee.jpg'
+    ];
+    images.forEach(function(imageSrc) {
+        var img = document.createElement('img');
+        img.src = imageSrc;
+        img.classList.add('wishlist-image'); // Add class to the image
+        img.addEventListener('click', function() {
+            // Clear the content of the second div
+            document.getElementById('two').innerHTML = '';
+            // Append reviews content to the second div
+            var reviews = [
+                "<h3>Review 1</h3><p>This is the first review.</p>",
+                "<h3>Review 2</h3><p>This is the second review.</p>",
+                "<h3>Review 3</h3><p>This is the third review.</p>"
+            ];
+            var reviewsContainer = document.createElement('div');
+            reviews.forEach(function(review) {
+                var reviewDiv = document.createElement('div');
+                reviewDiv.innerHTML = review;
+                reviewsContainer.appendChild(reviewDiv);
+            });
+            document.getElementById('two').appendChild(reviewsContainer);
+        });
+        document.getElementById('two').appendChild(img);
+    });
+});
+
+
+document.getElementById('reviews').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default behavior of the link
+
+    // Clear the content of the second div
+    document.getElementById('two').innerHTML = '';
+
+    // Append reviews content to the second div
+    var reviews = [
+    "<div><h3>Review on Movie 1</h3><img src='/images/WhatsApp Image 2024-04-13 at 22.32.52_974f0970.jpg' alt='Movie 1'><p>This is the Good.I recommend others too to watch it.</p></div>",
+    "<div><h3>Review on MOvie 2</h3><img src='/images/WhatsApp Image 2024-04-13 at 22.33.40_a564122d.jpg' alt='Movie 2'><p>This is not so good .I recommend others too to watch it on their risk.</p></div>",
+    "<div><h3>Review on Movie 3</h3><img src='/images/WhatsApp Image 2024-04-13 at 22.34.01_109712ee.jpg' alt='Movie 3'><p>This is the Bad.I recommend others not yo watch it.</p></div>"
+];
+
+    
+
+    var reviewsContainer = document.createElement('div');
+
+    reviews.forEach(function(review) {
+        var reviewDiv = document.createElement('div');
+        reviewDiv.innerHTML = review;
+        reviewDiv.style.cssText='background:white;margin-top:1rem;padding:2rem;width:40%% ; border-radius:0.4rem;margin-right:0.4rem;'
+        reviewsContainer.appendChild(reviewDiv);
+    });
+    reviewsContainer.style.cssText='margin-left:2rem;display:flex;height:50vh;'
+    document.getElementById('two').appendChild(reviewsContainer);
+
+});
+document.getElementById('purchase-history').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default behavior of the link
+
+    // Clear the content of the second div
+    document.getElementById('two').innerHTML = '';
+
+    // Create an array of movie details
+    var movies = [
+        {
+            imageSrc: '/images/WhatsApp Image 2024-04-13 at 22.32.52_974f0970.jpg',
+            title: 'Movie 1',
+            description: 'This is the first movie. It is a thrilling adventure.',
+            purchased: true
+        },
+        {
+            imageSrc: '/images/WhatsApp Image 2024-04-13 at 22.33.11_9f9d626f.jpg',
+            title: 'Movie 2',
+            description: 'This is the second movie. It is a romantic comedy.',
+            purchased: false
+        },
+        {
+            imageSrc: '/images/WhatsApp Image 2024-04-13 at 22.33.40_a564122d.jpg',
+            title: 'Movie 3',
+            description: 'This is the third movie. It is a sci-fi action film.',
+            purchased: true
+        },
+        {
+            imageSrc: '/images/WhatsApp Image 2024-04-13 at 22.34.01_109712ee.jpg',
+            title: 'Movie 4',
+            description: 'This is the fourth movie. It is a dramatic thriller.',
+            purchased: false
+        }
+    ];
+
+    // Loop through each movie and create a card
+    movies.forEach(function(movie) {
+        var cardDiv = document.createElement('div');
+        cardDiv.classList.add('card');
+
+        // Create an image element
+        var img = document.createElement('img');
+        img.src = movie.imageSrc;
+        img.alt = movie.title;
+        cardDiv.appendChild(img);
+
+        // Create a title element
+        var title = document.createElement('h3');
+        title.textContent = movie.title;
+        cardDiv.appendChild(title);
+
+        // Create a description element
+        var description = document.createElement('p');
+        description.textContent = movie.description;
+        cardDiv.appendChild(description);
+
+        // Create a purchased text element
+        var purchasedText = document.createElement('p');
+purchasedText.textContent = movie.purchased ? 'Purchased' : 'Not Purchased';
+purchasedText.style.color = movie.purchased ? 'green' : 'red';
+cardDiv.appendChild(purchasedText);
+
+        
+        // Append the card to the second div
+        document.getElementById('two').appendChild(cardDiv);
+    });
+});
+document.getElementById('ratings').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default behavior of the link
+
+    // Clear the content of the second div
+    document.getElementById('two').innerHTML = '';
+
+    // Create an array of movie details
+    var movies = [
+        {
+            imageSrc: '/images/WhatsApp Image 2024-04-13 at 22.32.52_974f0970.jpg',
+            title: 'Movie 1',
+            description: 'This is the first movie. It is a thrilling adventure.',
+            purchased: true,
+            rating: 4 // Example rating (out of 5)
+        },
+        {
+            imageSrc: '/images/WhatsApp Image 2024-04-13 at 22.33.11_9f9d626f.jpg',
+            title: 'Movie 2',
+            description: 'This is the second movie. It is a romantic comedy.',
+            purchased: false,
+            rating: 3 // Example rating (out of 5)
+        },
+        {
+            imageSrc: '/images/WhatsApp Image 2024-04-13 at 22.33.40_a564122d.jpg',
+            title: 'Movie 3',
+            description: 'This is the third movie. It is a sci-fi action film.',
+            purchased: true,
+            rating: 5 // Example rating (out of 5)
+        },
+        {
+            imageSrc: '/images/WhatsApp Image 2024-04-13 at 22.34.01_109712ee.jpg',
+            title: 'Movie 4',
+            description: 'This is the fourth movie. It is a dramatic thriller.',
+            purchased: false,
+            rating: 2 // Example rating (out of 5)
+        }
+    ];
+
+    // Loop through each movie and create a card
+    movies.forEach(function(movie) {
+        var cardDiv = document.createElement('div');
+        cardDiv.classList.add('card');
+
+        // Create an image element
+        var img = document.createElement('img');
+        img.src = movie.imageSrc;
+        img.alt = movie.title;
+        cardDiv.appendChild(img);
+
+        // Create a title element
+        var title = document.createElement('h3');
+        title.textContent = movie.title;
+        cardDiv.appendChild(title);
+
+        // Create a description element
+        var description = document.createElement('p');
+        description.textContent = movie.description;
+        cardDiv.appendChild(description);
+
+        // Create a purchased text element
+        var purchasedText = document.createElement('p');
+        purchasedText.textContent = movie.purchased ? 'Purchased' : 'Not Purchased';
+        purchasedText.style.color = movie.purchased ? 'green' : 'red';
+        cardDiv.appendChild(purchasedText);
+        cardDiv.style.cssText="overflow;"
+        // Create a rating element
+        var ratingDiv = document.createElement('div');
+        var stars = '';
+        for (var i = 0; i < movie.rating; i++) {
+            stars += '★'; // Adding star icon
+        }
+        for (var j = movie.rating; j < 5; j++) {
+            stars += '☆'; // Adding empty star icon for remaining rating
+        }
+        ratingDiv.textContent = stars;
+        cardDiv.appendChild(ratingDiv);
+
+        // Append the card to the second div
+        document.getElementById('two').appendChild(cardDiv);
+    });
+});
+document.getElementById('account-settings').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default behavior of the link
+
+    // Clear the content of the second div
+    document.getElementById('two').innerHTML = '';
+
+    // Create account settings content
+    var accountSettings = document.createElement('div');
+    accountSettings.classList.add('account-settings'); // Add class for styling
+    accountSettings.innerHTML = `
+        <h2>Account Settings</h2>
+        <ul>
+            <li>Change Password</li>
+            <li>Update Email</li>
+            <li>Privacy Settings</li>
+            <!-- Add more account settings options here -->
+        </ul>
+    `;
+
+    // Append the account settings content to the second div
+    document.getElementById('two').appendChild(accountSettings);
+});
+
+    </script>
+    
+    
+</body>
+</html>

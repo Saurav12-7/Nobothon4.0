@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://media.gqindia.com/wp-content/uploads/2019/11/top-image19.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background */
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+.container p{
+    color: black;
+}
+
+h1 {
+    margin: 0;
+}
+
+#subscription-plans {
+    padding: 50px 0;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.plan {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.plan:hover {
+    transform: translateY(-5px);
+}
+
+.plan h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.planbtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.planbtn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}

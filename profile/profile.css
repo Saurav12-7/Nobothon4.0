@@ -1,0 +1,227 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background: url("/images/WhatsApp\ Image\ 2024-04-13\ at\ 22.33.46_18a63490.jpg")no-repeat center center/cover;
+    
+}
+/* .left-half {
+    flex: 1;
+}
+
+.right-half {
+    flex: 1;
+} */
+/* Header styling */
+/* Header styling */
+#main {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content:first baseline;
+    border-bottom: 0.1rem solid #ccc;
+    background: linear-gradient(to bottom right, #754343, #d2391ef2); /* Gradient background */
+    border-top-right-radius: 10px;
+}
+
+#main img {
+    border: 0.2rem solid white; /* Change border color */
+    border-radius: 50%;
+    width: 180px; /* Adjust size as needed */
+    height: 180px; /* Adjust size as needed */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+#main img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add bigger shadow on hover */
+}
+
+#main div {
+    margin-right: 2.5rem;
+}
+
+#main p {
+    font-size: 2.5rem; /* Increase font size */
+    font-weight: bold;
+    color: white; /* Change text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+
+
+/* Body styling */
+#body {
+    padding: 2rem;
+}
+
+section {
+    margin-top: 2rem;
+    background-color: #fff; /* White background */
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px); /* Move up on hover */
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: Arial, sans-serif; /* Change font family */
+}
+
+section a {
+    color: #821b1b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    color: #f39c12; /* Change to desired hover color */
+}
+
+#two {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#two img {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    border-radius: 5px;
+}
+/* For screens smaller than 768px (tablets and mobile phones) */
+@media (max-width: 768px) {
+    /* Adjust header padding */
+    #main {
+        padding: 1rem;
+    }
+    
+    /* Adjust font size of header */
+    #main p {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust image size in header */
+    #main img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Adjust section padding */
+    section {
+        padding: 1rem;
+    }
+
+    /* Adjust font size of section headings */
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust image size in section */
+    #two img {
+        width: calc(50% - 20px);
+        
+    }
+}
+
+/* CSS for card layout */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(25% - 20px); /* Adjust the width to fit four cards in a row */
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    height: 50%;
+    background-color: #f9f9f9;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    
+}
+
+.card p {
+    font-size: 24px;
+    color: #666;
+}
+
+/* CSS for purchased text */
+.green-text {
+    color: green;
+
+    font-weight: bold;
+}
+
+.red-text {
+    color: red;
+    font-weight: bold;
+}
+/* CSS for account settings */
+#two .account-settings {
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px;
+    width: 920px; /* Adjust width as needed */
+    height: 450px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+#two .account-settings h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+}
+
+#two .account-settings ul {
+    list-style-type: none; /* Remove default list style */
+}
+
+#two .account-settings li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #666; /* Medium text color */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#two .account-settings li:hover {
+    color: #f39c12; /* Change color on hover */
+}
+
+#two .account-settings li:before {
+    content: "\2022"; /* Add bullet point */
+    color: #f39c12; /* Bullet point color */
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+#two .account-settings li:first-child {
+    margin-top: 0; /* Remove top margin for the first item */
+}
+
+#two .account-settings li:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last item */
+}
